@@ -1,0 +1,70 @@
+# Together we rise
+
+- Source URL: https://www.jamesharford.com/together-we-rise
+- Slug: together-we-rise
+
+## Together We Rise
+
+**Role/Credit:** Design, Direction, Animation
+
+GRM Daily is the modern success story of Black British music - but it’s taken a long and winding road to get to where it is today. Together We Rise is a new 4-part documentary that takes a no-holds barred look at GRM Daily and its historical highs and lows. With contributions from Stormzy, Aitch, Dizzee Rascal, Ms. Banks and many more top UK artists.
+
+Beej&Them in charge of delivering the Main titles sequence and all show GFX and visual effects. Beej Directed and animated the animated stories in the documentary, with help from  James Cheetham and John Summerson.
+
+![5fe3e55778a5f90dbbcf129e_MASTER-GRM-DAILY-TITLES_Clean-0-00-00-19.jpg](images/5fe3e55778a5f90dbbcf129e_MASTER-GRM-DAILY-TITLES_Clean-0-00-00-19.jpg)
+
+**Video (Vimeo):** https://vimeo.com/494276973
+
+![5fe3e0eec345303b55f48b01_GRM-Daily-The-Shooting_final_3-0-00-06-06.jpg](images/5fe3e0eec345303b55f48b01_GRM-Daily-The-Shooting_final_3-0-00-06-06.jpg)
+
+![5fe3e1066dd2c70a5c4ba495_GRM-Daily-The-Shooting_final_3-0-00-04-03.jpg](images/5fe3e1066dd2c70a5c4ba495_GRM-Daily-The-Shooting_final_3-0-00-04-03.jpg)
+
+![5fe3e0b88011fb19307e62aa_GRM-Daily-The-Shooting_final_3-0-00-08-02.jpg](images/5fe3e0b88011fb19307e62aa_GRM-Daily-The-Shooting_final_3-0-00-08-02.jpg)
+
+![5fe3e0d98beffc619ba09fa6_GRM-Daily-The-Shooting_final_3-0-01-08-00.jpg](images/5fe3e0d98beffc619ba09fa6_GRM-Daily-The-Shooting_final_3-0-01-08-00.jpg)
+
+![5fe3e121c34530069ff48c20_GRM-Daily-The-Shooting_final_3-0-01-13-06.jpg](images/5fe3e121c34530069ff48c20_GRM-Daily-The-Shooting_final_3-0-01-13-06.jpg)
+
+![5fe3e134377f116e264f4de5_GRM-Daily-The-Shooting_final_3-0-01-03-03.jpg](images/5fe3e134377f116e264f4de5_GRM-Daily-The-Shooting_final_3-0-01-03-03.jpg)
+
+![5fe3e188d957201c00a9d404_GRM_Ep_03_The-Disrespect_v005-0-09-05-00.jpg](images/5fe3e188d957201c00a9d404_GRM_Ep_03_The-Disrespect_v005-0-09-05-00.jpg)
+
+![5fe3e1c378a5f9450bcf0ad0_GRM_Ep_03_The-Disrespect_v005-0-09-08-05.jpg](images/5fe3e1c378a5f9450bcf0ad0_GRM_Ep_03_The-Disrespect_v005-0-09-08-05.jpg)
+
+**Video (Vimeo):** https://vimeo.com/494274640
+
+![5fe3e17a65c8173cd0fb5a41_GRM_Ep_03_The-Disrespect_v005-0-09-16-02.jpg](images/5fe3e17a65c8173cd0fb5a41_GRM_Ep_03_The-Disrespect_v005-0-09-16-02.jpg)
+
+![5fe3e1577ab12650efc8a31f_GRM_Ep_03_The-Disrespect_v005-0-09-15-02.jpg](images/5fe3e1577ab12650efc8a31f_GRM_Ep_03_The-Disrespect_v005-0-09-15-02.jpg)
+
+![5fe3e1e13e57ba5a1f45676e_GRM_Ep_03_The-Disrespect_v005-0-09-11-11.jpg](images/5fe3e1e13e57ba5a1f45676e_GRM_Ep_03_The-Disrespect_v005-0-09-11-11.jpg)
+
+![5fe3e16e0db7fa4cb0e42fc1_GRM-Daily-The-Shooting_final_3-0-00-49-00.jpg](images/5fe3e16e0db7fa4cb0e42fc1_GRM-Daily-The-Shooting_final_3-0-00-49-00.jpg)
+
+![5fe3e1947ab126b5f6c8a34a_GRM-Daily-The-Shooting_final_3-0-00-33-03.jpg](images/5fe3e1947ab126b5f6c8a34a_GRM-Daily-The-Shooting_final_3-0-00-33-03.jpg)
+
+![5fe3e1f89b4f363bdc326ba8_GRM_The-Shutdown_FINAL_v005-0-00-09-06.jpg](images/5fe3e1f89b4f363bdc326ba8_GRM_The-Shutdown_FINAL_v005-0-00-09-06.jpg)
+
+![5fe3e20be91bfef2944b2650_GRM-Daily-The-Shooting_final_3-0-00-00-10.jpg](images/5fe3e20be91bfef2944b2650_GRM-Daily-The-Shooting_final_3-0-00-00-10.jpg)
+
+![5fe3e14904bf07c83e476b51_GRM_The-Shutdown_FINAL_v005-0-00-34-07.jpg](images/5fe3e14904bf07c83e476b51_GRM_The-Shutdown_FINAL_v005-0-00-34-07.jpg)
+
+**Video (Vimeo):** https://vimeo.com/494273878
+
+![5fe3e1f89b4f363bdc326ba8_GRM_The-Shutdown_FINAL_v005-0-00-09-06.jpg](images/5fe3e1f89b4f363bdc326ba8_GRM_The-Shutdown_FINAL_v005-0-00-09-06.jpg)
+
+![5fe3e46f305f8652a2e0e1bd_GRM_The-Shutdown_FINAL_v005-0-01-12-07.jpg](images/5fe3e46f305f8652a2e0e1bd_GRM_The-Shutdown_FINAL_v005-0-01-12-07.jpg)
+
+![5fe3e47a192db25e629cd508_GRM_The-Shutdown_FINAL_v005-0-01-13-05.jpg](images/5fe3e47a192db25e629cd508_GRM_The-Shutdown_FINAL_v005-0-01-13-05.jpg)
+
+![5fe3e45c69c07887dbcb42ed_GRM_The-Shutdown_FINAL_v005-0-00-50-06.jpg](images/5fe3e45c69c07887dbcb42ed_GRM_The-Shutdown_FINAL_v005-0-00-50-06.jpg)
+
+![5fe3e1e13e57ba5a1f45676e_GRM_Ep_03_The-Disrespect_v005-0-09-11-11.jpg](images/5fe3e1e13e57ba5a1f45676e_GRM_Ep_03_The-Disrespect_v005-0-09-11-11.jpg)
+
+![5fe3e4eed37e7e9570fa9578_GRM_Ep_03_The-Disrespect_v005-0-09-12-09.jpg](images/5fe3e4eed37e7e9570fa9578_GRM_Ep_03_The-Disrespect_v005-0-09-12-09.jpg)
+
+![5fe3e5489666b3fba13437aa_MASTER-GRM-DAILY-TITLES_Clean-0-00-00-23.jpg](images/5fe3e5489666b3fba13437aa_MASTER-GRM-DAILY-TITLES_Clean-0-00-00-23.jpg)
+
+![5fe3e53b192db2c25f9cd581_MASTER-GRM-DAILY-TITLES_ep_01-0-00-07-05.jpg](images/5fe3e53b192db2c25f9cd581_MASTER-GRM-DAILY-TITLES_ep_01-0-00-07-05.jpg)
+
+![5fe3e5267ab126847ec8afd4_GRM_Ep_03_The-Disrespect_v005-0-09-16-09.jpg](images/5fe3e5267ab126847ec8afd4_GRM_Ep_03_The-Disrespect_v005-0-09-16-09.jpg)
