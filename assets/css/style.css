@@ -144,6 +144,25 @@ main {
   .card-meta { opacity: 1; transform: none; }
 }
 
+/* cards without a thumbnail image */
+.card.no-thumb {
+  background: linear-gradient(135deg, #1c1c1c, #101010);
+  border: 1px solid var(--line);
+}
+
+.card.no-thumb .card-meta {
+  opacity: 1;
+  transform: none;
+  inset: auto 0 0 0;
+}
+
+video.still {
+  width: 100%;
+  margin: 0 0 24px;
+  border-radius: 6px;
+  background: #161616;
+}
+
 /* project pages */
 .project { max-width: 980px; }
 

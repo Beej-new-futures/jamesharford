@@ -4,7 +4,22 @@ Rebuild of jamesharford.com (portfolio site for director/designer "Beej"). Repla
 
 ## Status
 
-Content archive is complete — everything from the live Webflow site has been crawled and organized locally. Rebuild (`src/`) has not started yet.
+Content archive complete, modernized static site generated into the repo root, auto-deploying to Cloudflare Pages (jamesharford.pages.dev). The live domain still points at Webflow until the rebuild is approved.
+
+## Adding a new project
+
+Drop a folder into `content/projects/` with images and/or `.mp4` files in it, then rebuild:
+
+```bash
+python3 scripts/build.py
+```
+
+- Folder name becomes the URL and title (`my-new-thing` → "My New Thing")
+- Media is laid out in filename order; newest project folders appear first in the homepage grid
+- Optional `thumb.jpg`/`thumb.png` sets the homepage thumbnail (otherwise the first image is used)
+- Optional `content.md` adds custom title/credits/copy — same format as the crawled projects
+
+Commit and push, and Cloudflare Pages redeploys automatically.
 
 ## Project structure
 

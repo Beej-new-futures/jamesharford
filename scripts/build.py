@@ -5,6 +5,17 @@ and writes index.html, /<slug>/index.html and /reels/index.html into the
 repo root. Re-run after editing content:
 
     python3 scripts/build.py
+
+Adding a new project: drop a folder into content/projects/ with images
+and/or .mp4 files in it. The folder name becomes the URL and title
+("my-new-thing" -> "My New Thing"), media is laid out in filename order,
+and the project appears at the front of the homepage grid. Optional
+extras inside the folder:
+
+    thumb.jpg / thumb.png   - homepage grid thumbnail (else first image)
+    content.md              - custom title/credits/copy, same format as
+                              the crawled projects (## Title,
+                              **Role/Credit:** ..., paragraphs, images)
 """
 import html
 import json
@@ -23,7 +34,43 @@ SITE_DESC = "The portfolio of digital artist and director Beej (James Harford)."
 
 # pages generated but excluded from the homepage grid
 EXTRA_PAGES = ["barcelona"]
-SKIP_PAGES = ["home-grid-experiment"]
+SKIP_PAGES = ["home-grid-experiment", "reels"]
+
+IMG_EXTS = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".avif"}
+VIDEO_EXTS = {".mp4", ".webm", ".mov"}
+
+
+def prettify(slug):
+    return slug.replace("_", " ").replace("-", " ").strip().title()
+
+
+def discover_local_projects(known_slugs):
+    """Folders in content/projects/ that aren't from the crawl become
+    auto-generated projects, newest first."""
+    found = []
+    for name in os.listdir(CONTENT):
+        path = os.path.join(CONTENT, name)
+        if not os.path.isdir(path) or name in known_slugs or name in SKIP_PAGES:
+            continue
+        media = sorted(
+            f for f in os.listdir(path)
+            if os.path.splitext(f)[1].lower() in IMG_EXTS | VIDEO_EXTS
+        )
+        if not media and not os.path.exists(os.path.join(path, "content.md")):
+            continue
+        thumb = next((f for f in media if os.path.splitext(f)[0].lower() == "thumb"), None)
+        if not thumb:
+            thumb = next((f for f in media if os.path.splitext(f)[1].lower() in IMG_EXTS), None)
+        found.append({
+            "slug": name,
+            "title": prettify(name),
+            "role": None,
+            "thumb": f"content/projects/{name}/{thumb}" if thumb else None,
+            "media": media,
+            "local": True,
+        })
+    found.sort(key=lambda p: os.path.getmtime(os.path.join(CONTENT, p["slug"])), reverse=True)
+    return found
 
 
 def esc(s):
@@ -62,7 +109,7 @@ def parse_content_md(slug):
                 blocks.append(("vimeo", m.group(1)))
         elif ln.startswith("!["):
             flush()
-            m = re.search(r"\]\(images/([^)]+)\)", ln)
+            m = re.search(r"\]\(([^)]+)\)", ln)
             if m:
                 blocks.append(("img", m.group(1)))
         elif ln.strip() == "":
@@ -111,8 +158,14 @@ def build_index(manifest):
     cards = []
     for p in manifest:
         role = f'<p class="card-role">{esc(p["role"])}</p>' if p["role"] else ""
-        cards.append(f"""  <a class="card" href="{p['slug']}/">
-    <img src="{p['thumb']}" alt="{esc(p['title'])}" loading="lazy">
+        if p.get("thumb"):
+            img = f'<img src="{p["thumb"]}" alt="{esc(p["title"])}" loading="lazy">'
+            cls = "card"
+        else:
+            img = ""
+            cls = "card no-thumb"
+        cards.append(f"""  <a class="{cls}" href="{p['slug']}/">
+    {img}
     <div class="card-meta">
       <h2>{esc(p['title'])}</h2>
       {role}
@@ -159,12 +212,43 @@ def build_project(slug, grid_meta):
                 f'loading="lazy" allow="fullscreen" allowfullscreen title="Vimeo video"></iframe></div>'
             )
         elif kind == "img":
-            src = f"../content/projects/{slug}/images/{val}"
+            src = f"../content/projects/{slug}/{val}"
             out.append(f'<img class="still" src="{src}" alt="" loading="lazy">')
 
     out.append('<p class="backlink"><a href="../">&larr; All work</a></p>')
     out.append("</main>")
     return page_shell(f"{title or slug} — Beej", desc, "\n".join(out), depth=1)
+
+
+def media_tag(slug, fname):
+    src = f"../content/projects/{slug}/{fname}"
+    if os.path.splitext(fname)[1].lower() in VIDEO_EXTS:
+        return (f'<video class="still" controls preload="metadata" playsinline>'
+                f'<source src="{src}"></video>')
+    return f'<img class="still" src="{src}" alt="" loading="lazy">'
+
+
+def build_local_project(proj):
+    """Page for a folder dropped into content/projects/ by hand."""
+    slug = proj["slug"]
+    md_path = os.path.join(CONTENT, slug, "content.md")
+    if os.path.exists(md_path):
+        page = build_project(slug, {"title": None, "role": None})
+        # append any media files the markdown didn't reference
+        with open(md_path, encoding="utf-8") as f:
+            md = f.read()
+        extras = [m for m in proj["media"] if m not in md]
+        if extras:
+            tags = "\n".join(media_tag(slug, m) for m in extras)
+            page = page.replace('<p class="backlink">', tags + '\n<p class="backlink">')
+        return page
+
+    out = ['<main class="project">', f'<h1>{esc(proj["title"])}</h1>']
+    for m in proj["media"]:
+        out.append(media_tag(slug, m))
+    out.append('<p class="backlink"><a href="../">&larr; All work</a></p>')
+    out.append("</main>")
+    return page_shell(f"{proj['title']} — Beej", SITE_DESC, "\n".join(out), depth=1)
 
 
 def build_reels():
@@ -190,9 +274,19 @@ def main():
         manifest = json.load(f)
     by_slug = {p["slug"]: p for p in manifest}
 
+    known = set(by_slug) | set(EXTRA_PAGES)
+    local = discover_local_projects(known)
+
     with open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8") as f:
-        f.write(build_index(manifest))
+        f.write(build_index(local + manifest))
     print("wrote index.html")
+
+    for proj in local:
+        slug = proj["slug"]
+        os.makedirs(os.path.join(ROOT, slug), exist_ok=True)
+        with open(os.path.join(ROOT, slug, "index.html"), "w", encoding="utf-8") as f:
+            f.write(build_local_project(proj))
+        print(f"wrote {slug}/index.html (local project)")
 
     slugs = [p["slug"] for p in manifest] + EXTRA_PAGES
     for slug in dict.fromkeys(slugs):  # dedupe, keep order
